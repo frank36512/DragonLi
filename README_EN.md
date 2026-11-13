@@ -72,6 +72,7 @@
 ## 📥 Download & Demo
 
 - **Windows single-file build**: download `Dragonli.exe` from [Releases](https://github.com/frank36512/dragonli/releases) and double-click to run.
+- **Quark Drive mirror**: [https://pan.quark.cn/s/337e9e697935](https://pan.quark.cn/s/337e9e697935) — a faster option for users in mainland China, no GitHub account required; same `Dragonli.exe` as on Releases.
 - **Screenshots / demo video**: being prepared; PRs adding them under `docs/` are welcome.
 
 ---
@@ -250,7 +251,7 @@ Dragonli/
 - **Windows** for the GUI and packaging script; the core logic is plain Python.
 - At least **one LLM service**: a cloud API key, or a running local Ollama / LM Studio instance.
 
-> Just want a quick look? Download `Dragonli.exe` from Releases, skip the install steps below, and add one LLM service in Settings. See the [Usage Guide](#usage) for the full walkthrough.
+> Just want a quick look? Download `Dragonli.exe` from [Releases](https://github.com/frank36512/dragonli/releases) or the [Quark Drive mirror](https://pan.quark.cn/s/337e9e697935), skip the install steps below, and add one LLM service in Settings. See the [Usage Guide](#usage) for the full walkthrough.
 
 ### Installation
 

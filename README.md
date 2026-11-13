@@ -71,6 +71,7 @@
 ## 📥 下载与演示
 
 - **Windows 单文件版**：前往 [Releases](https://github.com/frank36512/dragonli/releases) 下载 `Dragonli.exe`，双击即可运行。
+- **夸克网盘镜像**：[https://pan.quark.cn/s/337e9e697935](https://pan.quark.cn/s/337e9e697935) —— 国内下载更方便，无需 GitHub 账号，文件与 Releases 中的 `Dragonli.exe` 为同一版本。
 - **截图 / 演示视频**：正在整理中，欢迎通过 PR 补充到 `docs/` 目录。
 
 ---
@@ -249,7 +250,7 @@ Dragonli/
 - **Windows**：GUI 与打包脚本面向 Windows，核心业务逻辑为纯 Python。
 - 至少准备**一个 LLM 服务**：云端 API 密钥，或本机已启动的 Ollama / LM Studio。
 
-> 只想快速体验？直接下载 Releases 里的 `Dragonli.exe`，跳过下面的安装步骤，打开后在设置里填一个 LLM 服务即可。详细操作步骤见 [使用指南](#usage)。
+> 只想快速体验？从 [Releases](https://github.com/frank36512/dragonli/releases) 或 [夸克网盘](https://pan.quark.cn/s/337e9e697935) 下载 `Dragonli.exe`，跳过下面的安装步骤，打开后在设置里填一个 LLM 服务即可。详细操作步骤见 [使用指南](#usage)。
 
 ### 安装步骤
 
