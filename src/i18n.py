@@ -917,8 +917,8 @@ ZH_EN: dict[str, str] = {
     "日志已清空": "Logs cleared",
     "最后更新: {timestamp} | 总条目: {len(log_manager.log_entries)}": "Last update: {timestamp} | Total: {len(log_manager.log_entries)} entries",
     "一款基于大语言模型的全流程AI短剧创作工具。\n\n": "A full-pipeline AI drama creation tool based on LLMs.\n\n",
-    "基于 PyQt6 + OpenAI/Claude + Veo/Sora 等先进技术构建。": "Built with PyQt6 + OpenAI/Claude + Veo/Sora.",
-    "© 2025 AI Drama Studio. All rights reserved.\n联系我们: frank36512@gmail.com": "© 2025 AI Drama Studio. All rights reserved.\nContact: frank36512@gmail.com",
+    "基于 PyQt6 + FFmpeg 构建，支持 OpenAI 兼容 API、Ollama、ComfyUI 等云端与本地模型。": "Built with PyQt6 + FFmpeg; works with OpenAI-compatible APIs, Ollama and ComfyUI, cloud or fully local.",
+    "© 2026 狸猫短剧 (Dragonli) · Apache-2.0\n联系: frank36512@gmail.com": "© 2026 Dragonli · Licensed under Apache-2.0\nContact: frank36512@gmail.com",
     "狸猫短剧 (Dragonli)": "Dragonli",
     # ---- common ----
     "提示": "Notice",

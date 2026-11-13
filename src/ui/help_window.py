@@ -231,12 +231,12 @@ class HelpWindow(QWidget):
                       "3. 分镜制作：自动拆解剧本，生成AI绘画提示词\n"
                       "4. 视频合成：多模态融合，生成最终短剧视频\n\n"
                       "技术支持：\n"
-                      "基于 PyQt6 + OpenAI/Claude + Veo/Sora 等先进技术构建。")
+                      "基于 PyQt6 + FFmpeg 构建，支持 OpenAI 兼容 API、Ollama、ComfyUI 等云端与本地模型。")
         desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
         desc.setWordWrap(True)
         desc.setStyleSheet("margin: 20px; color: " + _theme.color("text") + "; font-size: 14px; line-height: 1.5;")
         
-        copyright = QLabel("© 2025 AI Drama Studio. All rights reserved.\n联系我们: frank36512@gmail.com")
+        copyright = QLabel("© 2026 狸猫短剧 (Dragonli) · Apache-2.0\n联系: frank36512@gmail.com")
         copyright.setStyleSheet("color: " + _theme.color("text_sub") + "; margin-top: 20px;")
         copyright.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
