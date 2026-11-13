@@ -337,6 +337,13 @@ python -m PyInstaller build_exe.spec --noconfirm --clean
 
 ---
 
+## 📬 联系方式
+
+- **问题反馈 / 功能建议**：优先通过 [GitHub Issues](https://github.com/frank36512/dragonli/issues) 提交，便于追踪和公开讨论。
+- **邮件联系**：[frank36512@gmail.com](mailto:frank36512@gmail.com)，适用于合作咨询、使用交流或不便公开的问题。
+
+---
+
 ## 📄 许可证
 
 本项目采用 Apache License 2.0 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。

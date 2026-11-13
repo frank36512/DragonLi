@@ -918,7 +918,7 @@ ZH_EN: dict[str, str] = {
     "最后更新: {timestamp} | 总条目: {len(log_manager.log_entries)}": "Last update: {timestamp} | Total: {len(log_manager.log_entries)} entries",
     "一款基于大语言模型的全流程AI短剧创作工具。\n\n": "A full-pipeline AI drama creation tool based on LLMs.\n\n",
     "基于 PyQt6 + OpenAI/Claude + Veo/Sora 等先进技术构建。": "Built with PyQt6 + OpenAI/Claude + Veo/Sora.",
-    "© 2025 AI Drama Studio. All rights reserved.\n联系我们: 275819960@qq.com": "© 2025 AI Drama Studio. All rights reserved.\nContact: 275819960@qq.com",
+    "© 2025 AI Drama Studio. All rights reserved.\n联系我们: frank36512@gmail.com": "© 2025 AI Drama Studio. All rights reserved.\nContact: frank36512@gmail.com",
     "狸猫短剧 (Dragonli)": "Dragonli",
     # ---- common ----
     "提示": "Notice",

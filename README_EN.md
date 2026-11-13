@@ -338,6 +338,13 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for th
 
 ---
 
+## 📬 Contact
+
+- **Bugs & feature requests**: please open a [GitHub Issue](https://github.com/frank36512/dragonli/issues) so the discussion stays searchable.
+- **Email**: [frank36512@gmail.com](mailto:frank36512@gmail.com) for collaboration, questions, or anything you would rather not post publicly.
+
+---
+
 ## 📄 License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.

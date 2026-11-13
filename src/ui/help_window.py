@@ -236,7 +236,7 @@ class HelpWindow(QWidget):
         desc.setWordWrap(True)
         desc.setStyleSheet("margin: 20px; color: " + _theme.color("text") + "; font-size: 14px; line-height: 1.5;")
         
-        copyright = QLabel("© 2025 AI Drama Studio. All rights reserved.\n联系我们: 275819960@qq.com")
+        copyright = QLabel("© 2025 AI Drama Studio. All rights reserved.\n联系我们: frank36512@gmail.com")
         copyright.setStyleSheet("color: " + _theme.color("text_sub") + "; margin-top: 20px;")
         copyright.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
