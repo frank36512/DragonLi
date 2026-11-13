@@ -71,7 +71,7 @@
 
 ## 📥 Download & Demo
 
-- **Windows single-file build**: download `Dragonli.exe` from [Releases](https://github.com/frank36512/Dragonli/releases) and double-click to run.
+- **Windows single-file build**: download `Dragonli.exe` from [Releases](https://github.com/frank36512/dragonli/releases) and double-click to run.
 - **Screenshots / demo video**: being prepared; PRs adding them under `docs/` are welcome.
 
 ---
@@ -256,7 +256,7 @@ Dragonli/
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/frank36512/Dragonli.git
+    git clone https://github.com/frank36512/dragonli.git
     cd Dragonli
     ```
 

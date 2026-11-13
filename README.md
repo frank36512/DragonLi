@@ -70,7 +70,7 @@
 
 ## 📥 下载与演示
 
-- **Windows 单文件版**：前往 [Releases](https://github.com/frank36512/Dragonli/releases) 下载 `Dragonli.exe`，双击即可运行。
+- **Windows 单文件版**：前往 [Releases](https://github.com/frank36512/dragonli/releases) 下载 `Dragonli.exe`，双击即可运行。
 - **截图 / 演示视频**：正在整理中，欢迎通过 PR 补充到 `docs/` 目录。
 
 ---
@@ -255,7 +255,7 @@ Dragonli/
 
 1.  **克隆仓库**:
     ```bash
-    git clone https://github.com/frank36512/Dragonli.git
+    git clone https://github.com/frank36512/dragonli.git
     cd Dragonli
     ```
 
