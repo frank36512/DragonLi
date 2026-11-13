@@ -1,0 +1,17 @@
+# 运行依赖（版本锁定自 .venv 实测可运行组合；Python 3.10+）
+PyQt6==6.10.0
+requests==2.32.5
+httpx==0.28.1
+openai==2.8.1
+opencv-python==4.9.0.80
+ffmpeg-python==0.2.0
+pydub==0.25.1
+Pillow==11.3.0
+numpy==1.26.4
+pyttsx3==2.99
+openai-whisper==20250625
+fastapi==0.143.0
+uvicorn==0.54.0
+pydantic==2.12.5
+imageio==2.37.2
+imageio-ffmpeg==0.6.0

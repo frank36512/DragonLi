@@ -1,0 +1,453 @@
+{
+  "119": {
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "120": {
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "123": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect",
+    "_meta": {
+      "title": "K采样器选择"
+    }
+  },
+  "124": {
+    "inputs": {
+      "scheduler": "beta",
+      "steps": 10,
+      "denoise": 1,
+      "model": [
+        "209",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler",
+    "_meta": {
+      "title": "基本调度器"
+    }
+  },
+  "125": {
+    "inputs": {
+      "noise": [
+        "129",
+        0
+      ],
+      "guider": [
+        "126",
+        0
+      ],
+      "sampler": [
+        "123",
+        0
+      ],
+      "sigmas": [
+        "124",
+        0
+      ],
+      "latent_image": [
+        "136",
+        1
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "126": {
+    "inputs": {
+      "model": [
+        "209",
+        0
+      ],
+      "conditioning": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "128": {
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "129": {
+    "inputs": {
+      "noise_seed": 111823661020508
+    },
+    "class_type": "RandomNoise",
+    "_meta": {
+      "title": "seed aijuxi"
+    }
+  },
+  "131": {
+    "inputs": {
+      "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17",
+      "values.a": [
+        "132",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression",
+    "_meta": {
+      "title": "数学表达式"
+    }
+  },
+  "132": {
+    "inputs": {
+      "value": 8
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "生成秒数"
+    }
+  },
+  "136": {
+    "inputs": {
+      "prompt": [
+        "160",
+        0
+      ],
+      "width": [
+        "195",
+        0
+      ],
+      "height": [
+        "195",
+        1
+      ],
+      "length": [
+        "131",
+        1
+      ],
+      "ref_image_size": "match",
+      "clip": [
+        "128",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ],
+      "audio_vae": [
+        "120",
+        0
+      ],
+      "ref_images.ref_image_0": [
+        "137",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "148",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "155",
+        0
+      ]
+    },
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "_meta": {
+      "title": "MiniMax H3 Reference to Video"
+    }
+  },
+  "137": {
+    "inputs": {
+      "image": "girl.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "图片1"
+    }
+  },
+  "146": {
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "148": {
+    "inputs": {
+      "image": "dabao.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "图片2"
+    }
+  },
+  "155": {
+    "inputs": {
+      "image": "office.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "图片3"
+    }
+  },
+  "160": {
+    "inputs": {
+      "text": "真实商品广告视频，画面从首帧就自然启动动作，开头无静止卡顿；全程固定同一个场景，不发生场景切换、环境跳转。\n图片1中的人物手持参考图2的护肤霜产品，坐在参考图3的办公椅上，配合自然肢体手势介绍产品。\n人物口播台词：“大宝，大宝，我爱你，我每天上班都会用，锁住皮肤水份不流失！价格只要一杯奶茶钱，超实惠！”\n"
+    },
+    "class_type": "JjkText",
+    "_meta": {
+      "title": "提示词"
+    }
+  },
+  "166": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "r-3iv-MiniMax_H3-aijuxi",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "169",
+        0
+      ],
+      "audio": [
+        "167",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "167": {
+    "inputs": {
+      "samples": [
+        "171",
+        0
+      ],
+      "vae": [
+        "120",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE解码（音频）"
+    }
+  },
+  "169": {
+    "inputs": {
+      "samples": [
+        "171",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "171": {
+    "inputs": {
+      "noise": [
+        "129",
+        0
+      ],
+      "guider": [
+        "175",
+        0
+      ],
+      "sampler": [
+        "123",
+        0
+      ],
+      "sigmas": [
+        "174",
+        0
+      ],
+      "latent_image": [
+        "172",
+        0
+      ]
+    },
+    "class_type": "SamplerCustomAdvanced",
+    "_meta": {
+      "title": "自定义采样器（高级）"
+    }
+  },
+  "172": {
+    "inputs": {
+      "video_latent": [
+        "206",
+        0
+      ],
+      "audio_latent": [
+        "177",
+        1
+      ]
+    },
+    "class_type": "LTXVConcatAVLatent",
+    "_meta": {
+      "title": "LTXVConcatAVLatent"
+    }
+  },
+  "174": {
+    "inputs": {
+      "sigmas": "0.9035, 0.6316, 0.3158, 0.0000"
+    },
+    "class_type": "ManualSigmas",
+    "_meta": {
+      "title": "step Sigmas aijuxi"
+    }
+  },
+  "175": {
+    "inputs": {
+      "model": [
+        "209",
+        0
+      ],
+      "conditioning": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "BasicGuider",
+    "_meta": {
+      "title": "基本引导器"
+    }
+  },
+  "177": {
+    "inputs": {
+      "av_latent": [
+        "125",
+        1
+      ]
+    },
+    "class_type": "LTXVSeparateAVLatent",
+    "_meta": {
+      "title": "LTXV分离音视频潜空间"
+    }
+  },
+  "183": {
+    "inputs": {
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1,
+      "model": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "195": {
+    "inputs": {
+      "aspect_ratio": "9:16 (Portrait Widescreen)",
+      "megapixels": 0.2,
+      "multiple": 32
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "分辨率"
+    }
+  },
+  "206": {
+    "inputs": {
+      "model_name": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+      "mode": "scale by multiplier",
+      "mode.scale": 2,
+      "align": 32,
+      "enable_temporal_chunking": true,
+      "force_unload": true,
+      "device": "cuda",
+      "precision": "fp16",
+      "latent": [
+        "177",
+        0
+      ]
+    },
+    "class_type": "MinimaxH3LatentUpscaler3D",
+    "_meta": {
+      "title": "Minimax H3 Latent Upscaler (3D)"
+    }
+  },
+  "207": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "166",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "208": {
+    "inputs": {
+      "clean_file_cache": false,
+      "clean_processes": false,
+      "clean_dlls": false,
+      "retry_times": 3,
+      "anything": [
+        "207",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "209": {
+    "inputs": {
+      "model": [
+        "183",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 4.0
+    },
+    "class_type": "MiniMaxH3SigmaShift",
+    "_meta": {
+      "title": "H3 Sigma Shift（音频增强）"
+    }
+  }
+}

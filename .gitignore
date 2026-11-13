@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDEs / Agent tools
+.vscode/
+.idea/
+*.swp
+*.swo
+.trae/
+openclaw/
+
+# Build & Distribution
+build/
+dist/
+*.exe
+*.pkg
+!build_exe.spec
+
+# Logs & runtime artifacts
+logs/
+*.log
+src/app.log
+temp_audio/
+smoke_out.txt
+
+# ---- Secrets & local config (NEVER commit) ----
+.env
+.env.*
+*.bak*
+*.backup
+*.old
+resources/config/config.json
+resources/config/config.json.*
+!resources/config/config.example.json
+
+# ---- User-generated content (local only, not part of the source) ----
+# Keep the directories (build_exe.spec datas expects them) but never commit their contents.
+resources/characters/*
+resources/scenes/*
+resources/props/*
+resources/projects/*
+resources/assets/*
+!resources/characters/.gitkeep
+!resources/scenes/.gitkeep
+!resources/props/.gitkeep
+!resources/projects/.gitkeep
+!resources/assets/.gitkeep
+
+# ---- Local tooling & runtime artifacts ----
+.workbuddy/
+dummy/
+error_log.txt
+*.tmp

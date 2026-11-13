@@ -1,0 +1,92 @@
+{
+  "1": {
+    "inputs": {
+      "video": "33333.mp4",
+      "force_rate": 0,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "Load Video (Upload)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "frame_rate": 48,
+      "loop_count": 0,
+      "filename_prefix": "enhance/interp",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": true,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "11",
+        0
+      ],
+      "audio": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine"
+    }
+  },
+  "5": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup"
+    }
+  },
+  "6": {
+    "inputs": {
+      "clean_file_cache": true,
+      "clean_processes": true,
+      "clean_dlls": true,
+      "retry_times": 3,
+      "anything": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup"
+    }
+  },
+  "11": {
+    "inputs": {
+      "ckpt_name": "rife49.pth",
+      "multiplier": 2,
+      "ensemble": true,
+      "scale_factor": 1,
+      "precision": "fp16",
+      "batch_size": 4,
+      "frames": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "LeeRIFEGPU",
+    "_meta": {
+      "title": "RIFE GPU Fast (Lee)"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "4": {
+    "inputs": {
+      "text": "杰作，最佳质量，超高清，CG 艺术，3D 渲染，Octane 渲染，BJD 球形关节人偶，日系写真质感。精致 BJD 女娃，东亚人偶面容，光滑陶瓷质感肌肤，通透玻璃球形眼珠，长睫毛，淡淡的粉调人偶妆面，浅棕微卷长假发，人偶精致唇釉，静态人偶姿态，可见细微球形关节。身着米白色宽松针织上衣，柔软布料褶皱，人偶服装。日系简约原木卧室，窗边白色纱帘，柔和漫射自然光，窗边柔光，暖色调，温柔静谧氛围。50mm 标准镜头，45° 斜角，中景半身构图，浅景深，背景虚化，细腻人偶皮肤陶瓷肌理，发丝细节精致，微弱环境光反射，8K 超高清。衣服上写着“操我啊”，墙上写着大字“我喜欢你，大大的鸡鸡”，写着小字“人偶精致唇釉，静态人偶姿态，可见细微球形关节。身着米白色宽松针织上衣，柔软布料褶皱，人偶服装。日系简约原木卧室，窗边白色纱帘，柔和漫射自然光，窗边柔光，暖色调，温柔静谧氛围。”",
+      "clip": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "blurry, deformed hands, extra fingers, fused limbs, watermark, garbled text",
+      "clip": [
+        "48",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": [
+        "23",
+        0
+      ],
+      "height": [
+        "23",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyFlux2LatentImage",
+    "_meta": {
+      "title": "空Latent图像（Flux2）",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "16": {
+    "inputs": {
+      "seed": 268574276788039,
+      "steps": 8,
+      "cfg": 1.1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "55",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "17": {
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "18": {
+    "inputs": {
+      "filename_prefix": "r-moss-t2i-",
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "保存图像",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "22": {
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "23": {
+    "inputs": {
+      "aspect_ratio": "9:16 (Portrait Widescreen)",
+      "megapixels": 2,
+      "multiple": 8
+    },
+    "class_type": "ResolutionSelector",
+    "_meta": {
+      "title": "分辨率选择器",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.2"
+    }
+  },
+  "46": {
+    "inputs": {
+      "unet_name": "moss_image_sft_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.0"
+    }
+  },
+  "48": {
+    "inputs": {
+      "clip_name": "qwen3.5_9b_w4a8_gptq.safetensors",
+      "type": "moss_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP",
+      "cnr_id": "comfy-core",
+      "ver": "0.41.0"
+    }
+  },
+  "55": {
+    "inputs": {
+      "lora_name": "MOSS-Image-SFT-8-steps-dmd.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）",
+      "cnr_id": "comfy-core",
+      "ver": "0.42.0"
+    }
+  },
+  "78": {
+    "inputs": {
+      "offload_model": true,
+      "offload_cache": true,
+      "anything": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "VRAMCleanup",
+    "_meta": {
+      "title": "🎈VRAM-Cleanup",
+      "cnr_id": "comfyui_memory_cleanup",
+      "ver": "1.1.3"
+    }
+  },
+  "79": {
+    "inputs": {
+      "clean_file_cache": false,
+      "clean_processes": false,
+      "clean_dlls": false,
+      "retry_times": 3,
+      "anything": [
+        "78",
+        0
+      ]
+    },
+    "class_type": "RAMCleanup",
+    "_meta": {
+      "title": "🎈RAM-Cleanup",
+      "cnr_id": "comfyui_memory_cleanup",
+      "ver": "1.1.3"
+    }
+  }
+}
