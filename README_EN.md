@@ -15,8 +15,6 @@
 > Simple does not mean limited: original or adapted stories, 15 genres, mixed cloud and local models, and portrait/landscape exports for every major platform — all in one pipeline.
 >
 > 👉 Want to jump straight in? See the [Usage Guide](#usage).
->
-> **API keys live only in your local `resources/config/config.json`, which is git-ignored and never committed.**
 
 ---
 
@@ -73,7 +71,41 @@
 
 - **Windows single-file build**: download `Dragonli.exe` from [Releases](https://github.com/frank36512/dragonli/releases) and double-click to run.
 - **Quark Drive mirror**: [https://pan.quark.cn/s/337e9e697935](https://pan.quark.cn/s/337e9e697935) — a faster option for users in mainland China, no GitHub account required; same `Dragonli.exe` as on Releases.
-- **Screenshots / demo video**: being prepared; PRs adding them under `docs/` are welcome.
+- **Screenshots / demo video**: see [Screenshots & Demo](#screenshots--demo) below.
+
+---
+
+<a id="screenshots--demo"></a>
+
+## 📸 Screenshots & Demo
+
+> The screenshots below come from the actual running app (sample project: *无人扶我青云志 / No One Helps Me Reach the Clouds*). Click any image to view it full size.
+
+| Home · one-click auto render entry | Projects · details and outline |
+| :---: | :---: |
+| [![Home](shots/1.png)](shots/1.png) | [![Project details](shots/2.png)](shots/2.png) |
+
+| Script · storyboard editing and video prompts | Roles / Props / Scenes · consistency assets |
+| :---: | :---: |
+| [![Script editor](shots/3.png)](shots/3.png) | [![Roles, props and scenes](shots/4.png)](shots/4.png) |
+
+| Generation setup · scheduling and checkpoints | Auto Render · live progress and logs |
+| :---: | :---: |
+| [![Generation setup](shots/5.png)](shots/5.png) | [![Live progress](shots/6.png)](shots/6.png) |
+
+| Video editor · clip preview and timeline | Asset library · character / prop / scene assets |
+| :---: | :---: |
+| [![Video editor](shots/7.png)](shots/7.png) | [![Asset library](shots/8.png)](shots/8.png) |
+
+| Character editor · reference images and AI prompts | Settings · API service configuration and test connection |
+| :---: | :---: |
+| [![Character editor](shots/9.png)](shots/9.png) | [![API configuration](shots/10.png)](shots/10.png) |
+
+### 🎬 Demo video
+
+[![Watch the sample film](shots/preview_poster.png)](shots/%E6%A0%B7%E7%89%871.mp4)
+
+**Sample film: *无人扶我青云志*** (~26 s, 9:16 portrait) — [▶ Watch / download MP4](shots/%E6%A0%B7%E7%89%871.mp4) (11.6 MB)
 
 ---
 
